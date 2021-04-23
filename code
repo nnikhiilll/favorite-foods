@@ -1,0 +1,27 @@
+# main.py
+print("Student, enter five of your favorite foods.")
+student=set()
+for i in range(1,6):
+  favorite1=input("food "+str(i)+": ")
+  student.add(favorite1)
+  
+
+print("Instructor, enter your five favorite foods.")
+instructor=set()
+for i in range(1,6):
+  favorite2=input("food"+str(i)+": ")
+  instructor.add(favorite2)
+  
+similiar=student.intersection(instructor)
+
+print(similiar)
+print("Here are the foods that only the student likes: ")
+for i in student:
+  if i not in instructor:
+    print(i)
+
+print("Here are the foods that only the intructor likes: ")
+for i in instructor:
+  if i not in student:
+    print(i)
+    
